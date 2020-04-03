@@ -20,7 +20,6 @@ i {
 
 i:hover {
   transform: scale(1.4);
-  box-shadow: rgba(0,0,0,0.2) 0px 2px 20px, inset rgba(0,0,0,0.2) 0px -1px 2px;
 }
 
 a, a:hover, a:visited {
@@ -40,31 +39,6 @@ a, a:hover, a:visited {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
-}
-
-.underline-magic {
-  transition: all 1s ease-in-out;
-  position: relative;
-}
-
-.underline-magic:after {
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-  left: 49%;
-  width: 0px;
-  bottom: -2px;
-  transform: scaleY(1.5);
-  opacity: 0;
-  transition: all 300ms ease-in-out;
-  background-color: darkgray;
-}
-
-.underline-magic:hover:after {
-  width: 100%;
-  left: 0;
-  opacity: 1;
 }
 
 #navbar {
@@ -120,12 +94,12 @@ a, a:hover, a:visited {
   align-items: center;
   justify-content: center;
   
-  margin-top: 25px;
   width: 100%;
 }
 
 #education, #skills, #projects {
   padding: 69px;
+  margin-top: 69px;
 
   width: 100%;
 }
@@ -157,15 +131,61 @@ a, a:hover, a:visited {
 .project {
   box-shadow: rgba(0,0,0,0.2) 0px 2px 20px, inset rgba(0,0,0,0.2) 0px -1px 2px;
   border-radius: 5px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 30px 20px 15px 20px;
 
-  margin-top: 25px;
+  margin-top: 69px;
 
   transition: all 200ms ease-in-out;
 }
 
 .project i {
   transition: none;
+}
+
+.project-front {
+  position: relative;
+  /* top: -10; */
+  margin-top: -50px;
+  padding: 3px;
+  font-size: x-large;
+}
+
+.project-left {
+  /* display: inline-block; */
+  /* width: 60%; */
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+}
+
+.project-header {
+  border-radius: 5px;
+  background-color: #4FA7BC;
+  padding: 0px 5px;
+  color: white;
+}
+
+.project-subtitle {
+  /* width: 200px;
+  text-justify: right;
+  background-color: rgba(0, 0, 0, .4);
+  height: 100%; */
+  width: 60%;
+
+}
+
+.project-components {
+  margin-top: 10px;
+  overflow: auto;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 10px;
+}
+
+.p2 {
+  
 }
 
 /* .project:hover {

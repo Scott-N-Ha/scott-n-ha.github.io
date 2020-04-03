@@ -121,15 +121,14 @@ var navbarHeader = document.getElementById('navbar-header'); // const sections =
 // });
 
 var projects = document.querySelectorAll('.project');
-projects.forEach(function (project) {
-  project.addEventListener('mouseover', function (e) {
-    project.style.backgroundColor = 'black';
-    project.style.color = 'white';
-  });
-  project.addEventListener('mouseleave', function (e) {
-    project.style.backgroundColor = 'white';
-    project.style.color = 'black';
-  });
+projects.forEach(function (project) {// project.addEventListener('mouseover', e => {
+  //   project.style.backgroundColor = 'black';
+  //   project.style.color = 'white';
+  // });
+  // project.addEventListener('mouseleave', e => {
+  //   project.style.backgroundColor = 'white';
+  //   project.style.color = 'black';
+  // });
 });
 
 function scroll() {
