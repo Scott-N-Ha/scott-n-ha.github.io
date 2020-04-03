@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap');
+
+
+/* 
+Colors
+Light Teal: #4FA7BC
+*/
+
+* {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+i {
+  transition: all 350ms ease-in-out;
+}
+
+i:hover {
+  transform: scale(1.4);
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 20px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.rainbow-effect:hover {
+  background-image: repeating-linear-gradient(90deg, #e11a1a, #e1791a, #e0e11a, #54e11a, #1a2be1);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 4s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.underline-magic {
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+.underline-magic:after {
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  left: 49%;
+  width: 0px;
+  bottom: -2px;
+  transform: scaleY(1.5);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  background-color: darkgray;
+}
+
+.underline-magic:hover:after {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+}
+
+#navbar {
+  position: sticky;
+  padding: 7px;
+  top: 0;
+  z-index: 9001;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #4FA7BC;;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 20px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+
+  width: 100%;
+  height: 69px;
+}
+
+#navbar * {
+  color: white;
+}
+
+#navbar-header {
+  justify-self: center;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: all 1000ms ease-in-out;
+}
+
+#navbar-left, #navbar-links {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100px;
+}
+
+#top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 9002;
+  font-size: xx-large;
+  color: white;
+  border-radius: 50%;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  margin-top: 25px;
+  width: 100%;
+}
+
+#education, #skills, #projects {
+  padding: 69px;
+
+  width: 100%;
+}
+
+/* #skills {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  width: 300px;
+}
+
+#skills::-webkit-scrollbar {
+  width: 20px;
+  height: 10px;
+}
+
+#skills::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 5px;
+}
+
+#skills::-webkit-scrollbar-track {
+  background: transparent;
+} */
+
+.project {
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 20px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+  border-radius: 5px;
+  padding: 20px;
+
+  margin-top: 25px;
+
+  transition: all 200ms ease-in-out;
+}
+
+.project i {
+  transition: none;
+}
+
+/* .project:hover {
+  transform: scale(1.1);
+} */
