@@ -194,6 +194,7 @@ a:visited {
 .project {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 20px, inset rgba(0, 0, 0, 0.2) 0px -1px 2px;
   border-radius: 5px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -203,6 +204,7 @@ a:visited {
   margin: 69px;
   padding: 35px 20px 15px 20px;
   width: 270px;
+  height: 110%;
 
   transition: all 350ms ease-in-out;
 }
@@ -257,11 +259,25 @@ a:visited {
   margin-right: 25px;
 }
 
-.pibg {
+.project-background {
   position: relative;
-  background-image: url("lib/images/therapuppy-front.jpeg");
   background-position: center;
-  background-size: 70% auto;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 5px;
+}
+
+.p1bg {
+  background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/reposti.png);
+}
+
+.p2bg {
+  background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/therapuppy-front.jpeg);
+}
+
+.p3bg {
+  background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/ss1.png);
 }
 
 /* .project:hover {
