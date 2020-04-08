@@ -2,7 +2,7 @@
 
 :root {
   --base: #4FA7BC;
-  --base-outline: rgba(79, 167, 188, 0.2);
+  --base-outline: rgba(79, 167, 188, 0.6);
   --highlight: white;
   --subtitle: darkgray;
 }
@@ -238,7 +238,8 @@ a:visited {
   margin: 69px;
   padding: 35px 20px 15px 20px;
   width: 270px;
-  height: 110%;
+  /* height: 110%; */
+  height: 120px;
 
   transition: all 350ms ease-in-out;
 }
@@ -260,6 +261,7 @@ a:visited {
   /* width: 60%; */
   /* display: flex; */
   /* justify-content: space-evenly; */
+  min-height: 85px;
 }
 
 .project-header {
@@ -275,7 +277,7 @@ a:visited {
   background-color: rgba(0, 0, 0, .4);
   height: 100%; */
   width: 60%;
-
+  font-size: small;
 }
 
 .project-components {
@@ -285,7 +287,7 @@ a:visited {
   /* justify-content: space-evenly; */
   font-size: 10px;
   position: relative;
-  margin-bottom: -50px;
+  margin-bottom: -60px;
   color: var(--base);
 }
 
