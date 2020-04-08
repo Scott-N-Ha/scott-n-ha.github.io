@@ -101,9 +101,32 @@ a:visited {
   justify-content: center;
 
   width: 100%;
+  background-image: url("./lib/images/mainbg.jpg");
 }
 
+#title-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  /* padding: 20px; */
+  margin: 36px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 102px;
+}
+
+#headshot {
+  /* border-radius: 50%; */
+  height: 100%;
+  width: auto;
+}
+
+#title-words {
+  margin-left: 10px;
+  text-align: center;
+  padding: 20px;
+}
 
 #education {
   padding: 69px;
