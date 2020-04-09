@@ -2,16 +2,11 @@
 
 :root {
   --base: #4FA7BC;
-  --base-outline: rgba(79, 167, 188, 0.4);
+  --base-outline: rgba(79, 167, 188, 0.36);
   --highlight: white;
   --subtitle: darkgray;
   --default: black;
 }
-
-/* 
-Colors
-Light Teal: var(--base)
-*/
 
 * {
   box-sizing: border-box;
@@ -86,19 +81,6 @@ a:visited {
   margin-right: 10px;
 }
 
-#top-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 9002;
-  font-size: xx-large;
-  /* color: var(--highlight);
-  background-color: var(--base); */
-  color: var(--base);
-  border-radius: 50%;
-  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
-}
-
 #main {
   display: flex;
   flex-direction: column;
@@ -136,14 +118,25 @@ a:visited {
   text-align: center;
   padding: 20px;
   color: var(--highlight);
+
 }
 
 #title-name {
   font-size: 36px;
+  transition: all 250ms ease-in-out;
+}
+
+#title-card:hover #title-name {
+  color: var(--base);
 }
 
 #title-subtitle {
   color: var(--base);
+  transition: all 250ms ease-in-out;
+}
+
+#title-card:hover #title-subtitle {
+  color: var(--highlight);
 }
 
 .section-header {
@@ -225,6 +218,10 @@ a:visited {
 
 .skill li:hover .skill-underline {
   width: 69px;
+}
+
+.project-divider {
+  padding-top: 1px;
 }
 
 .project {
@@ -316,7 +313,7 @@ a:visited {
   background-position: center;
   /* background-size: 80% auto; */
   /* background-size: 100% auto; */
-  background-size: auto 90%;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   /* border-radius: 5px; */
@@ -349,7 +346,8 @@ a:visited {
   margin-left: auto;
 }
 
-.p2, .p4 {
+.p2,
+.p4 {
   margin-left: 69px;
 }
 
@@ -358,10 +356,36 @@ a:visited {
 } */
 
 footer {
-  padding-top: 130px;
+  padding-top: 50px;
   text-align: center;
   /* background-color: rgba(0, 0, 0, 0.6); */
-  height: 200px;
+  height: 100px;
   font-size: x-small;
   color: var(--subtitle);
+}
+
+#footer-name {
+  color: var(--default);
+  transition: all 250ms ease-in-out;
+}
+
+#footer-name:hover {
+  color: var(--base);
+}
+
+#top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 9002;
+  font-size: xx-large;
+  /* color: var(--highlight);
+  background-color: var(--base); */
+  color: var(--base);
+  border-radius: 50%;
+  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
+}
+
+#top-btn:hover {
+  cursor: pointer;
 }
