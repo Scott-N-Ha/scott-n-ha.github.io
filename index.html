@@ -42,12 +42,12 @@
     </div>
   </div>
 
-  <div class="dropdown">
+  <div class="dropdown unselectable">
     <ul>
       <li><a href="#education"> Education</a></li>
       <li><a href="#skills"> Skills</a></li>
       <li><a href="#projects"> Projects</a></li>
-      <ul>
+      <ul class="dropdown-projects">
         <li><a href="#Reposti"> Reposti</a></li>
         <li><a href="#TheraPuppy"> TheraPuppy</a></li>
         <li><a href="#Commander"> Commander</a></li>
@@ -67,7 +67,7 @@
   </div>
 
   <div id="education" class="section-header">
-    Education
+    <a href="#education">Education</a>
     <div class="section-underline"></div>
   </div>
   <div id="education-section">
@@ -86,7 +86,7 @@
   </div>
 
   <div id="skills" class="section-header">
-    Skills
+    <a href="#skills">Skills</a>
     <div class="section-underline"></div>
   </div>
   <div id="skills-section">
@@ -161,7 +161,7 @@
   </div>
 
   <div id="projects" class="section-header">
-    Projects
+    <a href="#projects">Projects</a>
     <div class="section-underline"></div>
   </div>
   <div id="projects-section">
@@ -169,7 +169,8 @@
     <div class="project-background p1bg">
       <div class="project p1">
         <div class="project-front">
-          <span class="project-header">Reposti</span>
+          <span class="project-header"><a href="https://reposti.herokuapp.com/"
+              target="_blank" title="Reposti Live Site">Reposti</a></span>
           <a href="https://reposti.herokuapp.com/" target="_blank"
             title="Reposti Live Site"><i
               class="fas fa-external-link-square-alt"></i></a>
@@ -182,7 +183,7 @@
             post-type uploading and retrieving, liking, and following
             capabilities. </span>
         </div>
-        <ul class="project-components">
+        <ul class="project-components unselectable">
           <li>ReactJS</li>
           <li>ReduxJS</li>
           <li>Ruby on Rails</li>
@@ -194,7 +195,9 @@
     <div class="project-background p2bg">
       <div class="project p2">
         <div class="project-front">
-          <span class="project-header">TheraPuppy</span>
+          <span class="project-header"><a
+              href="https://therapuppy-app.herokuapp.com/" target="_blank"
+              title="TheraPuppy Live Site">TheraPuppy</a></span>
           <a href="https://therapuppy-app.herokuapp.com/" target="_blank"
             title="TheraPuppy Live Site"><i
               class="fas fa-external-link-square-alt"></i></a>
@@ -207,7 +210,7 @@
             out
             their dogs to those in need of a furry friend.</span>
         </div>
-        <ul class="project-components">
+        <ul class="project-components unselectable">
           <li>ReactJS</li>
           <li>ReduxJS</li>
           <li>MERN</li>
@@ -219,7 +222,9 @@
     <div class="project-background p3bg">
       <div class="project p3">
         <div class="project-front">
-          <span class="project-header">Commander</span>
+          <span class="project-header"><a
+              href="https://scott-n-ha.github.io/Commander/" target="_blank"
+              title="Commander Live Site">Commander</a></span>
           <a href="https://scott-n-ha.github.io/Commander/" target="_blank"
             title="Commander Live Site"><i
               class="fas fa-external-link-square-alt"></i></a>
@@ -232,7 +237,7 @@
             the
             opponent’s bases on board, versus multiple AI computers.</span>
         </div>
-        <ul class="project-components">
+        <ul class="project-components unselectable">
           <li>HTML</li>
           <li>CSS</li>
           <li>Vanilla DOM</li>
@@ -244,7 +249,9 @@
     <div class="project-background p4bg">
       <div class="project p4">
         <div class="project-front">
-          <span class="project-header">JavaScript 30</span>
+          <span class="project-header"><a
+              href="https://scott-n-ha.github.io/JavaScript30/" target="_blank"
+              title="JavaScript 30 Live Site">JavaScript 30</a></span>
           <a href="https://scott-n-ha.github.io/JavaScript30/" target="_blank"
             title="JavaScript 30 Live Site"><i
               class="fas fa-external-link-square-alt"></i></a>
@@ -258,7 +265,7 @@
             April
             1st, 2020.</span>
         </div>
-        <ul class="project-components">
+        <ul class="project-components unselectable">
           <li>JavaScript</li>
           <li>HTML</li>
           <li>CSS</li>
@@ -267,7 +274,7 @@
     </div>
   </div>
 
-  <footer id="footer">
+  <footer id="footer" class="unselectable">
     Made by <span id="footer-name">Scott Ha</span>.
     <br>
     Website built using HTML, CSS, JavaScript, and jQuery.
