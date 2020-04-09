@@ -11,7 +11,7 @@
     href="./lib/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16"
     href="./lib/images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
   <link rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
     integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
@@ -25,7 +25,10 @@
 
 <body>
   <div id="navbar">
-    <div id="navbar-left"><span>Scott Ha</span></div>
+    <div id="navbar-left">
+      <i class="fas fa-bars"></i>
+      <span id="navbar-name">Scott Ha</span>
+    </div>
     <div id="navbar-header"></div>
     <div id="navbar-links">
       <a href="https://github.com/scott-N-Ha/" target="_blank"><i
@@ -37,6 +40,20 @@
       <a href="mailto:ha_scott@yahoo.com" target="_blank"><i
           class="fas fa-envelope-square"></i></a>
     </div>
+  </div>
+
+  <div class="dropdown">
+    <ul>
+      <li><a href="#education"> Education</a></li>
+      <li><a href="#skills"> Skills</a></li>
+      <li><a href="#projects"> Projects</a></li>
+      <ul>
+        <li><a href="#Reposti">   Reposti</a></li>
+        <li><a href="#TheraPuppy">   TheraPuppy</a></li>
+        <li><a href="#Commander">   Commander</a></li>
+        <li><a href="#JS30">   JavaScript30</a></li>
+      </ul>
+    </ul>
   </div>
 
   <div id="main">
@@ -227,7 +244,7 @@
     <div class="project-background p4bg">
       <div class="project p4">
         <div class="project-front">
-          <span class="project-header">JS 30 Day</span>
+          <span class="project-header">JavaScript 30</span>
           <a href="https://scott-n-ha.github.io/JavaScript30/" target="_blank"
             title="JavaScript 30 Live Site"><i
               class="fas fa-external-link-square-alt"></i></a>
