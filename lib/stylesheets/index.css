@@ -380,13 +380,13 @@ a:visited {
 
 .p1,
 .p3 {
-  margin-right: 69px;
+  margin-right: 10%;
   margin-left: auto;
 }
 
 .p2,
 .p4 {
-  margin-left: 69px;
+  margin-left: 10%;
 }
 
 /* .project:hover {
