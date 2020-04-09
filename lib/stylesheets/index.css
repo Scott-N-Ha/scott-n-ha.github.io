@@ -336,10 +336,20 @@ a:visited {
 
 .project-header {
   border-radius: 5px;
+  border: 1px solid var(--base);
   background-color: var(--base);
   padding: 0px 5px;
   color: var(--highlight);
   font-size: larger;
+
+  transition: all 250ms ease-in-out;
+}
+
+.project-header:hover {
+  /* transform: scale(1.3); */
+  border: 1px solid var(--base);
+  background-color: var(--highlight);
+  color: var(--base);
 }
 
 .project-subtitle {
