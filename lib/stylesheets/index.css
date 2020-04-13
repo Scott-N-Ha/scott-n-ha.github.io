@@ -105,7 +105,7 @@ a:visited {
   padding: 10px;
   border: 1px solid var(--base);
   border-radius: 5px;
-  background-color: var(--highlight);
+  background-color: var(--background);
   box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
 
   transition: all 750ms ease-in-out;
@@ -132,7 +132,7 @@ a:visited {
 }
 
 .dropdown li:hover {
-  color: var(--base);
+  color: var(--default);
   /* color: var(--default); */
   /* background-color: var(--base); */
 }
@@ -325,9 +325,11 @@ a:visited {
   /* background-color: var(--subtitle); */
   /* outline: 1px auto var(--default); */
   background-color: var(--highlight);
-  color: var(--default);
+  color: var(--base);
   border-radius: 5px;
-  padding: 1px;
+  padding: 4px;
+  height: 25px;
+  width: 25px;
 }
 
 .project-front {
@@ -336,6 +338,12 @@ a:visited {
   margin-top: -50px;
   padding: 3px;
   /* font-size: x-large; */
+  display: flex;
+  align-items: center;
+}
+
+.project-front * {
+  margin-right: 5px;
 }
 
 .project-left {
