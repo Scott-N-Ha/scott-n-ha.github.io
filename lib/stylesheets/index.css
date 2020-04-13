@@ -6,6 +6,7 @@
   --highlight: white;
   --subtitle: darkgray;
   --default: black;
+  --background: white;
 }
 
 * {
@@ -14,6 +15,10 @@
   font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-family: 'IBM Plex Serif', serif;
   font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+  background-color: var(--background);
 }
 
 i {
@@ -121,6 +126,11 @@ a:visited {
   /* font-size: small; */
 }
 
+.dropdown .dark-selector {
+  border-top: 1px solid var(--subtitle);
+  padding-top: 13px;
+}
+
 .dropdown li:hover {
   color: var(--base);
   /* color: var(--default); */
@@ -207,6 +217,7 @@ a:visited {
   padding: 88px 0 16px 0;
   margin-left: 5%;
   font-size: x-large;
+  color: var(--default);
 }
 
 .section-underline {
@@ -251,6 +262,7 @@ a:visited {
 .skill-header {
   font-size: large;
   font-weight: bold;
+  color: var(--default);
 }
 
 .skill li {
@@ -290,7 +302,7 @@ a:visited {
 .project {
   box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
   border-radius: 5px;
-  background-color: white;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -311,7 +323,7 @@ a:visited {
   transition: none;
   /* color: var(--base); */
   /* background-color: var(--subtitle); */
-  outline: 1px auto var(--highlight);
+  /* outline: 1px auto var(--default); */
   background-color: var(--highlight);
   color: var(--default);
   border-radius: 5px;
@@ -357,6 +369,7 @@ a:visited {
   text-justify: right;
   background-color: rgba(0, 0, 0, .4);
   height: 100%; */
+  color: var(--default);
   width: 60%;
   font-size: small;
 }
@@ -461,6 +474,69 @@ footer {
 
 #top-btn:hover {
   cursor: pointer;
+}
+
+.switch {
+  /* z-index: 9001; */
+  /* position: relative; */
+}
+
+/* Toggle Switch found: https://www.w3schools.com/howto/howto_css_switch.asp */
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  /* top: 0;
+  left: 0; */
+  right: 50;
+  bottom: 7px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 60px;
+  height: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* Grayscale snippet found: https://stackoverflow.com/a/7273987 */

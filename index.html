@@ -44,6 +44,7 @@
 
   <div class="dropdown unselectable">
     <ul>
+      <li><a href="#home"> Home</a></li>
       <li><a href="#education"> Education</a></li>
       <li><a href="#skills"> Skills</a></li>
       <li><a href="#projects"> Projects</a></li>
@@ -53,10 +54,17 @@
         <li><a href="#Commander"> Commander</a></li>
         <li><a href="#JS30"> JavaScript30</a></li>
       </ul>
+      <li class="dark-selector">Dark:
+        <label class="switch">
+          <input id="dark-mode" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </li>
     </ul>
   </div>
 
-  <div id="main" title="Nara Deer Park, Japan">
+  <div id="home"></div>
+  <div id ="main" title="Nara Deer Park, Japan">
     <div id="title-card" title="Scott Ha, Software Engineer">
       <img id="headshot" src="./lib/images/headshot.png" alt="Scott Ha">
       <div id="title-words">
@@ -219,7 +227,7 @@
         </ul>
       </div>
     </div>
-    
+
     <div id="Commander" class="project-divider"></div>
     <div class="project-background p3bg fade-in" title="Commander">
       <div class="project p3">
@@ -249,7 +257,8 @@
     </div>
 
     <div id="JS30" class="project-divider"></div>
-    <div class="project-background p4bg fade-in" title="JavaScript 30 Day Challenge">
+    <div class="project-background p4bg fade-in"
+      title="JavaScript 30 Day Challenge">
       <div class="project p4">
         <div class="project-front">
           <span class="project-header"><a

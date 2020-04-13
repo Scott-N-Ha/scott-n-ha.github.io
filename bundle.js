@@ -93,7 +93,26 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.info('Thanks for visiting my website!\nFeel free to contact me with any of the links found on the navigation bar!\nI hope you enjoyed the experience.\n- Scott Ha');
+console.info('Thanks for visiting my website!\nFeel free to contact me with any of the links found on the navigation bar!\nI hope you enjoyed the experience.\n- Scott Ha'); // Color Themes
+
+var colorAttrs = ["--base", "--base-outline", "--highlight", "--subtitle", "--default", "--background"];
+var light = {
+  "--base": "#4FA7BC",
+  "--base-outline": "rgba(79, 167, 188, 0.36)",
+  "--highlight": "white",
+  "--subtitle": "darkgray",
+  "--default": "black",
+  "--background": "white"
+};
+var dark = {
+  "--base": "#445878",
+  "--base-outline": "rgba(68, 88, 120, 0.36)",
+  "--highlight": "#92CDCF",
+  "--subtitle": "#31353D",
+  "--default": "#92CDCF",
+  // "--default": "#EEEFF7",
+  "--background": "#1C1D21"
+};
 var topBtn = document.getElementById('top-btn');
 var navBarName = document.getElementById('navbar-name');
 topBtn.addEventListener('click', function (e) {
@@ -119,8 +138,22 @@ window.onscroll = function () {
 
 var bars = document.querySelector('.fa-bars');
 var dropdown = document.querySelector('.dropdown');
-bars.addEventListener('click', function (e) {
-  dropdown.classList.toggle('open');
+var themeToggle = document.querySelector('#dark-mode'); // bars.addEventListener('click', e => {
+//   dropdown.classList.toggle('open');
+// });
+
+window.addEventListener('click', function (e) {
+  if (e.target === bars) dropdown.classList.toggle('open');else if (e.target !== dropdown && e.target !== themeToggle && e.target !== document.querySelector('.slider')) dropdown.classList.remove('open');
+});
+
+function changeTheme(attrs) {
+  colorAttrs.forEach(function (attr) {
+    document.body.style.setProperty(attr, attrs[attr]);
+  }); // document.body.style.setProperty("--primary-color", "red");
+}
+
+themeToggle.addEventListener('change', function (e) {
+  changeTheme(themeToggle.checked ? dark : light);
 }); // Scroll to Anchor found: https://www.yogihosting.com/jquery-scroll-to-element/
 
 $('a[href^="#"]').on('click', function (e) {
