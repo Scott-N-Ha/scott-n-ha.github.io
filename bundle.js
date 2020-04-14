@@ -108,7 +108,8 @@ var dark = {
   "--base": "#445878",
   "--base-outline": "rgba(68, 88, 120, 0.36)",
   "--highlight": "#92CDCF",
-  "--subtitle": "#31353D",
+  // "--subtitle": "#31353D",
+  "--subtitle": "#788296",
   "--default": "#92CDCF",
   // "--default": "#EEEFF7",
   "--background": "#1C1D21"
