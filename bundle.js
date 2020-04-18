@@ -116,11 +116,10 @@ var dark = {
 };
 var topBtn = document.getElementById('top-btn');
 var navBarName = document.getElementById('navbar-name');
-topBtn.addEventListener('click', function (e) {
-  $('html,body').animate({
-    scrollTop: 0
-  }, 'slow');
-});
+var bars = document.querySelector('.fa-bars');
+var dropdown = document.querySelector('.dropdown');
+var themeToggle = document.querySelector('#dark-mode'); // const schools = document.querySelectorAll('.school');
+// const skills = document.querySelectorAll('.skill li');
 
 function scroll() {
   if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
@@ -129,29 +128,63 @@ function scroll() {
   } else {
     topBtn.style.display = "none";
     navBarName.style.opacity = 0;
-  }
+  } // schools.forEach(school => {
+  //   const slideInAt = (window.scrollY + window.innerHeight) - school.offsetHeight / 2;
+  //   const slideOutAt = school.offsetTop + school.offsetHeight;
+  //   const halfIn = slideInAt > school.offsetTop;
+  //   const inView = window.scrollY < slideOutAt;
+  //   if (halfIn && inView) school.classList.add('show');
+  //   else school.classList.remove('show');
+  // });
+  // skills.forEach(skill => {
+  //   const slideInAt = (window.scrollY + window.innerHeight) - skill.offsetHeight / 2;
+  //   const slideOutAt = skill.offsetTop + skill.offsetHeight;
+  //   const halfIn = slideInAt > skill.offsetTop;
+  //   const inView = window.scrollY < slideOutAt;
+  //   if (halfIn && inView) skill.classList.add('show');
+  //   else skill.classList.remove('show');
+  // });
+
 }
-
-window.onscroll = function () {
-  return scroll();
-}; // const repostiBg = document.querySelector('.p1bg');
-
-
-var bars = document.querySelector('.fa-bars');
-var dropdown = document.querySelector('.dropdown');
-var themeToggle = document.querySelector('#dark-mode'); // bars.addEventListener('click', e => {
-//   dropdown.classList.toggle('open');
-// });
-
-window.addEventListener('click', function (e) {
-  if (e.target === bars) dropdown.classList.toggle('open');else if (e.target !== dropdown && e.target !== themeToggle && e.target !== document.querySelector('.slider')) dropdown.classList.remove('open');
-});
 
 function changeTheme(attrs) {
   colorAttrs.forEach(function (attr) {
     document.body.style.setProperty(attr, attrs[attr]);
-  }); // document.body.style.setProperty("--primary-color", "red");
+  });
 }
+
+function debounce(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 15;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+  var timeout;
+  return function () {
+    var context = this,
+        args = arguments;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+topBtn.addEventListener('click', function (e) {
+  $('html,body').animate({
+    scrollTop: 0
+  }, 'slow');
+});
+window.addEventListener('click', function (e) {
+  if (e.target === bars) dropdown.classList.toggle('open');else if (e.target !== dropdown && e.target !== themeToggle && e.target !== document.querySelector('.slider')) dropdown.classList.remove('open');
+});
+
+window.onscroll = function () {
+  return scroll();
+};
 
 themeToggle.addEventListener('change', function (e) {
   changeTheme(themeToggle.checked ? dark : light);
@@ -167,22 +200,7 @@ $('a[href^="#"]').on('click', function (e) {
   }, 750, 'swing', function () {
     window.location.hash = targetEle;
   });
-}); // Window Fade-In/Out found: https://stackoverflow.com/questions/26694385/fade-in-on-scroll-down-fade-out-on-scroll-up-based-on-element-position-in-win
-// $(window).on("load",function() {
-//   $(window).scroll(function() {
-//     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-//     $(".fade-in").each(function() {
-//       /* Check the location of each desired element */
-//       var objectBottom = $(this).offset().top + $(this).outerHeight();
-//       /* If the element is completely within bounds of the window, fade it in */
-//       if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-//         if ($(this).css("opacity")==0) {$(this).fadeTo(369,1);}
-//       } else { //object goes out of view (scrolling up)
-//         if ($(this).css("opacity")==1) {$(this).fadeTo(369,0);}
-//       }
-//     });
-//   }).scroll(); //invoke scroll-handler on page-load
-// });
+});
 
 /***/ })
 

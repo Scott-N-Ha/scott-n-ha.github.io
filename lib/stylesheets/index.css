@@ -238,6 +238,9 @@ a:visited {
   flex-direction: column;
   margin-bottom: 20px;
   font-size: medium;
+  /* opacity: 0;
+  transform: translateX(-50%); */
+  transition: all 250ms ease-in-out;
 }
 
 .school-name {
@@ -269,6 +272,8 @@ a:visited {
   margin-top: 5px;
   color: var(--subtitle);
   /* width: auto; */
+  /* opacity: 0;
+  transform: translateX(-30%); */
   transition: all 200ms ease-in-out;
 }
 
@@ -482,6 +487,11 @@ footer {
 
 #top-btn:hover {
   cursor: pointer;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0%);
 }
 
 .switch {
