@@ -149,7 +149,8 @@ a:visited {
 
   width: 100%;
   /* height: 20%; */
-  background-image: url(https://github.com/Scott-N-Ha/scott-n-ha.github.io/blob/master/lib/images/mainbg.jpg?raw=true);
+  /* background-image: url(https://github.com/Scott-N-Ha/scott-n-ha.github.io/blob/master/lib/images/mainbg.jpg?raw=true); */
+  background-image: url("../images/mainbg.jpg");
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -424,19 +425,23 @@ a:visited {
 }
 
 .p1bg {
-  background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/reposti.png);
+  /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/reposti.png); */
+  background-image: url("../images/reposti.png");
 }
 
 .p2bg {
-  background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/therapuppy-front.jpeg);
+  /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/therapuppy-front.jpeg); */
+  background-image: url("../images/therapuppy-front.jpeg");
 }
 
 .p3bg {
-  background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/ss1.png);
+  /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/ss1.png); */
+  background-image: url("../images/ss1.png");
 }
 
 .p4bg {
-  background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/js30.png);
+  /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/js30.png); */
+  background-image: url("../images/js30.png");
 }
 
 .p1,
