@@ -319,7 +319,7 @@ a:visited {
   padding: 35px 20px 15px 20px;
   width: 270px;
   /* height: 110%; */
-  height: 120px;
+  min-height: 120px;
   margin-bottom: -170px;
 
   transition: all 350ms ease-in-out;
@@ -444,8 +444,14 @@ a:visited {
   background-image: url("../images/js30.png");
 }
 
+.p5bg {
+  /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/therapuppy-front.jpeg); */
+  background-image: url("../images/pokemon-go-box-values.png");
+}
+
 .p1,
-.p3 {
+.p3,
+.p5 {
   margin-right: 10%;
   margin-left: auto;
 }
