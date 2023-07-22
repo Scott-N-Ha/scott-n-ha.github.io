@@ -93,8 +93,9 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.info('Thanks for visiting my website!\nFeel free to contact me with any of the links found on the navigation bar!\nI hope you enjoyed the experience.\n- Scott Ha'); // Color Themes
+console.info('Thanks for visiting my website!\nFeel free to contact me with any of the links found on the navigation bar!\nI hope you enjoyed the experience.\n- Scott Ha');
 
+// Color Themes
 var colorAttrs = ["--base", "--base-outline", "--highlight", "--subtitle", "--default", "--background"];
 var light = {
   "--base": "#4FA7BC",
@@ -118,7 +119,8 @@ var topBtn = document.getElementById('top-btn');
 var navBarName = document.getElementById('navbar-name');
 var bars = document.querySelector('.fa-bars');
 var dropdown = document.querySelector('.dropdown');
-var themeToggle = document.querySelector('#dark-mode'); // const schools = document.querySelectorAll('.school');
+var themeToggle = document.querySelector('#dark-mode');
+// const schools = document.querySelectorAll('.school');
 // const skills = document.querySelectorAll('.skill li');
 
 function scroll() {
@@ -128,23 +130,29 @@ function scroll() {
   } else {
     topBtn.style.display = "none";
     navBarName.style.opacity = 0;
-  } // schools.forEach(school => {
+  }
+
+  // schools.forEach(school => {
   //   const slideInAt = (window.scrollY + window.innerHeight) - school.offsetHeight / 2;
   //   const slideOutAt = school.offsetTop + school.offsetHeight;
+
   //   const halfIn = slideInAt > school.offsetTop;
   //   const inView = window.scrollY < slideOutAt;
+
   //   if (halfIn && inView) school.classList.add('show');
   //   else school.classList.remove('show');
   // });
+
   // skills.forEach(skill => {
   //   const slideInAt = (window.scrollY + window.innerHeight) - skill.offsetHeight / 2;
   //   const slideOutAt = skill.offsetTop + skill.offsetHeight;
+
   //   const halfIn = slideInAt > skill.offsetTop;
   //   const inView = window.scrollY < slideOutAt;
+
   //   if (halfIn && inView) skill.classList.add('show');
   //   else skill.classList.remove('show');
   // });
-
 }
 
 function changeTheme(attrs) {
@@ -152,27 +160,23 @@ function changeTheme(attrs) {
     document.body.style.setProperty(attr, attrs[attr]);
   });
 }
-
 function debounce(func) {
   var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 15;
   var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
   var timeout;
   return function () {
     var context = this,
-        args = arguments;
-
+      args = arguments;
     var later = function later() {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
-
     var callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
 }
-
 topBtn.addEventListener('click', function (e) {
   $('html,body').animate({
     scrollTop: 0
@@ -181,15 +185,14 @@ topBtn.addEventListener('click', function (e) {
 window.addEventListener('click', function (e) {
   if (e.target === bars) dropdown.classList.toggle('open');else if (e.target !== dropdown && e.target !== themeToggle && e.target !== document.querySelector('.slider')) dropdown.classList.remove('open');
 });
-
 window.onscroll = function () {
   return scroll();
 };
-
 themeToggle.addEventListener('change', function (e) {
   changeTheme(themeToggle.checked ? dark : light);
-}); // Scroll to Anchor found: https://www.yogihosting.com/jquery-scroll-to-element/
+});
 
+// Scroll to Anchor found: https://www.yogihosting.com/jquery-scroll-to-element/
 $('a[href^="#"]').on('click', function (e) {
   e.preventDefault();
   var targetEle = this.hash;
