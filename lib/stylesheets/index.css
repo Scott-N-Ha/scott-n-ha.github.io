@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap');
-
 :root {
-  --base: #4FA7BC;
+  --base: #4fa7bc;
   --base-outline: rgba(79, 167, 188, 0.36);
   --highlight: white;
   --subtitle: darkgray;
@@ -11,14 +9,15 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-family: 'IBM Plex Serif', serif;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-family: "IBM Plex Serif", serif;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 body {
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 i {
@@ -47,8 +46,9 @@ a:visited {
   align-items: center;
 
   background-color: var(--base);
-  ;
-  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
+  box-shadow:
+    var(--base-outline) 0px 2px 20px,
+    inset var(--base-outline) 0px -1px 2px;
 
   width: 100%;
   height: 69px;
@@ -93,7 +93,8 @@ a:visited {
   opacity: 1;
 }
 
-.disabled, .disabled * {
+.disabled,
+.disabled * {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -114,7 +115,9 @@ a:visited {
   border: 1px solid var(--base);
   border-radius: 5px;
   background-color: var(--background);
-  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
+  box-shadow:
+    var(--base-outline) 0px 2px 20px,
+    inset var(--base-outline) 0px -1px 2px;
 
   transition: all 750ms ease-in-out;
   color: var(--subtitle);
@@ -160,9 +163,12 @@ a:visited {
   /* background-image: url(https://github.com/Scott-N-Ha/scott-n-ha.github.io/blob/master/lib/images/mainbg.jpg?raw=true); */
   background-image: url("../images/mainbg.jpg");
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
+  box-shadow:
+    var(--base-outline) 0px 2px 20px,
+    inset var(--base-outline) 0px -1px 2px;
+  min-height: 360px;
 }
 
 #title-card {
@@ -174,9 +180,8 @@ a:visited {
   margin: 69px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
-  /* height: 140px; */
-  height: 120px;
-  width: 320px;
+  min-height: 120px;
+  width: min(90vw, 420px);
   /* box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px; */
   /* max-width: 320px; */
 }
@@ -186,6 +191,7 @@ a:visited {
   /* border-radius: 50%; */
   /* height: 100%; */
   width: auto;
+  max-height: 120px;
   height: 100%;
 }
 
@@ -199,7 +205,7 @@ a:visited {
 }
 
 #title-name {
-  font-size: x-large;
+  font-size: clamp(1.35rem, 3vw, 2rem);
   transition: all 250ms ease-in-out;
 }
 
@@ -210,7 +216,7 @@ a:visited {
 #title-subtitle {
   color: var(--base);
   transition: all 250ms ease-in-out;
-  font-size: medium;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 #title-card:hover #title-subtitle {
@@ -314,7 +320,9 @@ a:visited {
 }
 
 .project {
-  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
+  box-shadow:
+    var(--base-outline) 0px 2px 20px,
+    inset var(--base-outline) 0px -1px 2px;
   border-radius: 5px;
   background-color: var(--background);
   display: flex;
@@ -325,7 +333,7 @@ a:visited {
   margin-left: 69px; */
   /* margin: 69px; */
   padding: 35px 20px 15px 20px;
-  width: 270px;
+  width: min(88vw, 360px);
   /* height: 110%; */
   min-height: 120px;
   margin-bottom: -170px;
@@ -334,7 +342,9 @@ a:visited {
 }
 
 .project:hover {
-  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
+  box-shadow:
+    var(--base-outline) 0px 2px 20px,
+    inset var(--base-outline) 0px -1px 2px;
 }
 
 .project i {
@@ -396,7 +406,7 @@ a:visited {
   background-color: rgba(0, 0, 0, .4);
   height: 100%; */
   color: var(--default);
-  width: 60%;
+  width: 100%;
   font-size: small;
 }
 
@@ -404,6 +414,7 @@ a:visited {
   margin-top: 30px;
   /* overflow: auto; */
   display: flex;
+  flex-wrap: wrap;
   /* justify-content: space-evenly; */
   font-size: 10px;
   position: relative;
@@ -425,9 +436,9 @@ a:visited {
   background-position: center;
   /* background-size: 80% auto; */
   /* background-size: 100% auto; */
-  background-size: 70% auto;
+  background-size: min(90vw, 900px) auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   /* border-radius: 5px; */
   /* height: 120px; */
   padding-top: 88px;
@@ -473,6 +484,150 @@ a:visited {
   margin-left: 10%;
 }
 
+@media (max-width: 1024px) {
+  .section-underline {
+    width: 65%;
+  }
+
+  #education-section,
+  #skills-section {
+    margin-left: 10%;
+    width: 85%;
+  }
+
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .p5 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    height: 60px;
+    padding: 8px 10px;
+  }
+
+  #navbar-left {
+    margin-left: 6px;
+  }
+
+  #navbar i {
+    font-size: 22px;
+  }
+
+  #navbar-left *,
+  #navbar-links * {
+    margin-right: 8px;
+  }
+
+  #title-card {
+    margin: 48px 16px;
+    min-height: 110px;
+  }
+
+  #headshot {
+    max-height: 110px;
+  }
+
+  #title-words {
+    padding: 12px;
+  }
+
+  .section-header {
+    margin-left: 7%;
+    padding: 72px 0 12px 0;
+    font-size: 1.4rem;
+  }
+
+  #education-section,
+  #skills-section {
+    padding-top: 32px;
+    margin-left: 7%;
+    width: 88%;
+  }
+
+  .project-background {
+    padding-top: 68px;
+    margin-top: 68px;
+    padding-bottom: 84px;
+    margin-bottom: 84px;
+  }
+
+  .project {
+    margin-bottom: -120px;
+  }
+
+  .project-components {
+    margin-top: 20px;
+    margin-bottom: -44px;
+    row-gap: 8px;
+  }
+
+  .project-components li {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  #navbar-name {
+    display: none;
+  }
+
+  #navbar-links i {
+    font-size: 20px;
+  }
+
+  .dropdown {
+    margin-left: 8px;
+  }
+
+  #title-card {
+    flex-direction: column;
+    justify-content: center;
+    width: min(92vw, 360px);
+    padding: 10px;
+    min-height: 180px;
+  }
+
+  #headshot {
+    height: 88px;
+    max-height: 88px;
+  }
+
+  #title-words {
+    margin-left: 0;
+    padding: 10px 8px;
+  }
+
+  .project {
+    width: min(92vw, 360px);
+    padding: 30px 14px 12px 14px;
+  }
+
+  .project-front {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .project-header {
+    font-size: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* .project:hover {
   transform: scale(1.1);
 } */
@@ -505,7 +660,9 @@ footer {
   background-color: var(--base); */
   color: var(--base);
   border-radius: 50%;
-  box-shadow: var(--base-outline) 0px 2px 20px, inset var(--base-outline) 0px -1px 2px;
+  box-shadow:
+    var(--base-outline) 0px 2px 20px,
+    inset var(--base-outline) 0px -1px 2px;
 }
 
 #top-btn:hover {
@@ -539,8 +696,8 @@ footer {
   right: 50;
   bottom: 7px;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   width: 60px;
   height: 34px;
 }
@@ -553,19 +710,19 @@ footer {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -650,5 +807,5 @@ input:checked+.slider:before {
   -ms-user-select: none;
   /* IE 10+ and Edge */
   user-select: none;
-  /* Non-prefixed version, 
+  /* Non-prefixed version */
 }
