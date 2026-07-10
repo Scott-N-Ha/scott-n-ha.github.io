@@ -20,7 +20,7 @@ module.exports = (_env, argv = {}) => {
           exclude: /(node_modules)/,
           use: {
             loader: "babel-loader",
-            query: {
+            options: {
               presets: ["@babel/env"],
             },
           },

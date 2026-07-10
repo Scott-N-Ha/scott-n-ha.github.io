@@ -157,24 +157,36 @@ a:visited {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 
   width: 100%;
-  /* height: 20%; */
-  /* background-image: url(https://github.com/Scott-N-Ha/scott-n-ha.github.io/blob/master/lib/images/mainbg.jpg?raw=true); */
-  background-image: url("../images/mainbg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #111;
   box-shadow:
     var(--base-outline) 0px 2px 20px,
     inset var(--base-outline) 0px -1px 2px;
   min-height: 360px;
 }
 
+#main-bg-picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+#main-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 #title-card {
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  position: relative;
+  z-index: 1;
 
   /* padding: 20px; */
   margin: 69px;
@@ -450,26 +462,61 @@ a:visited {
 .p1bg {
   /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/reposti.png); */
   background-image: url("../images/reposti.png");
+  background-image: image-set(
+    url("../images/reposti-768.avif") type("image/avif") 1x,
+    url("../images/reposti-1024.avif") type("image/avif") 2x,
+    url("../images/reposti-768.webp") type("image/webp") 1x,
+    url("../images/reposti-1024.webp") type("image/webp") 2x,
+    url("../images/reposti.png") type("image/png") 1x
+  );
 }
 
 .p2bg {
   /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/therapuppy-front.jpeg); */
   background-image: url("../images/therapuppy-front.jpeg");
+  background-image: image-set(
+    url("../images/therapuppy-front-768.avif") type("image/avif") 1x,
+    url("../images/therapuppy-front-1024.avif") type("image/avif") 2x,
+    url("../images/therapuppy-front-768.webp") type("image/webp") 1x,
+    url("../images/therapuppy-front-1024.webp") type("image/webp") 2x,
+    url("../images/therapuppy-front.jpeg") type("image/jpeg") 1x
+  );
 }
 
 .p3bg {
   /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/ss1.png); */
   background-image: url("../images/ss1.png");
+  background-image: image-set(
+    url("../images/ss1-768.avif") type("image/avif") 1x,
+    url("../images/ss1-1024.avif") type("image/avif") 2x,
+    url("../images/ss1-768.webp") type("image/webp") 1x,
+    url("../images/ss1-1024.webp") type("image/webp") 2x,
+    url("../images/ss1.png") type("image/png") 1x
+  );
 }
 
 .p4bg {
   /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/js30.png); */
   background-image: url("../images/js30.png");
+  background-image: image-set(
+    url("../images/js30-768.avif") type("image/avif") 1x,
+    url("../images/js30-1024.avif") type("image/avif") 2x,
+    url("../images/js30-768.webp") type("image/webp") 1x,
+    url("../images/js30-1024.webp") type("image/webp") 2x,
+    url("../images/js30.png") type("image/png") 1x
+  );
 }
 
 .p5bg {
   /* background-image: url(https://raw.githubusercontent.com/Scott-N-Ha/scott-n-ha.github.io/master/lib/images/therapuppy-front.jpeg); */
   background-image: url("../images/pokemon-go-box-values.png");
+  background-image: image-set(
+    url("../images/pokemon-go-box-values-768.avif") type("image/avif") 1x,
+    url("../images/pokemon-go-box-values-1024.avif") type("image/avif") 2x,
+    url("../images/pokemon-go-box-values-768.webp") type("image/webp") 1x,
+    url("../images/pokemon-go-box-values-1024.webp") type("image/webp") 2x,
+    url("../images/pokemon-go-box-values.png") type("image/png") 1x
+  );
 }
 
 .p1,
@@ -555,6 +602,61 @@ a:visited {
     margin-top: 68px;
     padding-bottom: 84px;
     margin-bottom: 84px;
+  }
+
+  .p1bg {
+    background-image: url("../images/reposti.png");
+    background-image: image-set(
+      url("../images/reposti-480.avif") type("image/avif") 1x,
+      url("../images/reposti-768.avif") type("image/avif") 2x,
+      url("../images/reposti-480.webp") type("image/webp") 1x,
+      url("../images/reposti-768.webp") type("image/webp") 2x,
+      url("../images/reposti.png") type("image/png") 1x
+    );
+  }
+
+  .p2bg {
+    background-image: url("../images/therapuppy-front.jpeg");
+    background-image: image-set(
+      url("../images/therapuppy-front-480.avif") type("image/avif") 1x,
+      url("../images/therapuppy-front-768.avif") type("image/avif") 2x,
+      url("../images/therapuppy-front-480.webp") type("image/webp") 1x,
+      url("../images/therapuppy-front-768.webp") type("image/webp") 2x,
+      url("../images/therapuppy-front.jpeg") type("image/jpeg") 1x
+    );
+  }
+
+  .p3bg {
+    background-image: url("../images/ss1.png");
+    background-image: image-set(
+      url("../images/ss1-480.avif") type("image/avif") 1x,
+      url("../images/ss1-768.avif") type("image/avif") 2x,
+      url("../images/ss1-480.webp") type("image/webp") 1x,
+      url("../images/ss1-768.webp") type("image/webp") 2x,
+      url("../images/ss1.png") type("image/png") 1x
+    );
+  }
+
+  .p4bg {
+    background-image: url("../images/js30.png");
+    background-image: image-set(
+      url("../images/js30-480.avif") type("image/avif") 1x,
+      url("../images/js30-768.avif") type("image/avif") 2x,
+      url("../images/js30-480.webp") type("image/webp") 1x,
+      url("../images/js30-768.webp") type("image/webp") 2x,
+      url("../images/js30.png") type("image/png") 1x
+    );
+  }
+
+  .p5bg {
+    background-image: url("../images/pokemon-go-box-values.png");
+    background-image: image-set(
+      url("../images/pokemon-go-box-values-480.avif") type("image/avif") 1x,
+      url("../images/pokemon-go-box-values-768.avif") type("image/avif") 2x,
+      url("../images/pokemon-go-box-values-480.webp") type("image/webp") 1x,
+      url("../images/pokemon-go-box-values-768.webp") type("image/webp") 2x,
+      url("../images/pokemon-go-box-values.png") type("image/png") 1x
+    );
   }
 
   .project {

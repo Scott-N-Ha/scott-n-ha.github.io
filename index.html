@@ -16,21 +16,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
   <link rel="preload" as="image" href="./lib/images/mainbg.jpg"
     fetchpriority="high">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap">
   <!-- <link rel="manifest" href="/site.webmanifest"> -->
-  <link rel="stylesheet"
+  <link rel="preload" as="style"
     href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
     integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
-    crossorigin="anonymous">
+    crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+      crossorigin="anonymous">
+  </noscript>
   <link rel="stylesheet" href="./lib/stylesheets/reset.css">
   <link rel="stylesheet" href="./lib/stylesheets/index.css">
   <script src="./bundle.js" defer></script>
-  <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6173292899968944"
-    crossorigin="anonymous"></script>
   <title>Scott Ha</title>
 </head>
 
@@ -79,9 +84,28 @@
 
   <div id="home"></div>
   <div id="main" title="Nara Deer Park, Japan">
+    <picture id="main-bg-picture" aria-hidden="true">
+      <source type="image/avif"
+        srcset="./lib/images/mainbg-768.avif 768w, ./lib/images/mainbg-1280.avif 1280w, ./lib/images/mainbg-1920.avif 1920w"
+        sizes="100vw">
+      <source type="image/webp"
+        srcset="./lib/images/mainbg-768.webp 768w, ./lib/images/mainbg-1280.webp 1280w, ./lib/images/mainbg-1920.webp 1920w"
+        sizes="100vw">
+      <img id="main-bg-image" src="./lib/images/mainbg.jpg"
+        alt="Nara Deer Park, Japan" loading="eager" fetchpriority="high"
+        decoding="async">
+    </picture>
     <div id="title-card" title="Scott Ha, Software Engineer">
-      <img id="headshot" src="./lib/images/headshot.png" alt="Scott Ha"
-        loading="eager" decoding="async" fetchpriority="high">
+      <picture>
+        <source type="image/avif"
+          srcset="./lib/images/headshot-160.avif 160w, ./lib/images/headshot-320.avif 320w"
+          sizes="(max-width: 520px) 88px, (max-width: 768px) 110px, 120px">
+        <source type="image/webp"
+          srcset="./lib/images/headshot-160.webp 160w, ./lib/images/headshot-320.webp 320w"
+          sizes="(max-width: 520px) 88px, (max-width: 768px) 110px, 120px">
+        <img id="headshot" src="./lib/images/headshot.png" alt="Scott Ha"
+          loading="eager" decoding="async" fetchpriority="high">
+      </picture>
       <div id="title-words">
         <h1 id="title-name">Scott Ha</h1>
         <h2 id="title-subtitle">Full-Stack Software Engineer</h2>
@@ -342,7 +366,7 @@
   <footer id="footer" class="unselectable">
     Made by <span id="footer-name">Scott Ha</span>.
     <br>
-    Website built using HTML, CSS, JavaScript, and jQuery.
+    Website built using HTML, CSS, and JavaScript.
   </footer>
 
   <i id="top-btn" class="fas fa-arrow-alt-circle-up" style="display: none;"></i>
